@@ -38,27 +38,35 @@ typeWriter();
 //-------------------------slider------------------------
 
 let divDuSlider = document.querySelectorAll(".container>div");
+const sliderContainer = document.querySelector(".container"); // Ajout
 let nbrDeDiv = divDuSlider.length;
 let divCourante = 0;
 let avancer = document.getElementById("after");
 let reculer = document.getElementById("before");
 const spanCounterSlide = document.querySelector(".wrapper span");
 
+// Variables pour le swipe
+let touchStartX = 0;
+let touchEndX = 0;
+
 spanCounterSlide.textContent = divCourante + 1 + "/" + nbrDeDiv;
 reculer.style.visibility = "hidden";
 
-avancer.addEventListener("click", () => {
+// Logique pour avancer
+function slideSuivante() {
   if (divCourante < nbrDeDiv - 1) {
     divCourante++;
     reculer.style.visibility = "visible";
-    if (divCourante === 2) {
+    if (divCourante === nbrDeDiv - 1) {
+      // Corrigé (c'était "2")
       avancer.style.visibility = "hidden";
     }
   }
   TranslateSlider();
-});
+}
 
-reculer.addEventListener("click", () => {
+// Logique pour reculer
+function slidePrecedente() {
   if (divCourante > 0) {
     divCourante--;
     avancer.style.visibility = "visible";
@@ -67,8 +75,9 @@ reculer.addEventListener("click", () => {
     }
   }
   TranslateSlider();
-});
+}
 
+// Fonction qui bouge le slider
 function TranslateSlider() {
   spanCounterSlide.textContent = divCourante + 1 + "/" + nbrDeDiv;
   const pourcentageDecalage = -divCourante * 100;
@@ -77,6 +86,45 @@ function TranslateSlider() {
   );
 }
 
+// --- Écouteurs d'événements ---
+
+// Clics sur les boutons
+avancer.addEventListener("click", slideSuivante);
+reculer.addEventListener("click", slidePrecedente);
+
+// Gestion du swipe tactile
+if (sliderContainer) {
+  sliderContainer.addEventListener(
+    "touchstart",
+    (e) => {
+      // Enregistre la position de départ
+      touchStartX = e.changedTouches[0].screenX;
+    },
+    { passive: true }
+  );
+
+  sliderContainer.addEventListener("touchend", (e) => {
+    // Enregistre la position de fin
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+}
+
+// Calcule la direction du swipe
+function handleSwipe() {
+  const swipeThreshold = 50; // Décalage minimum en pixels pour valider un swipe
+
+  if (touchEndX < touchStartX - swipeThreshold) {
+    // Swipe vers la gauche (slide suivante)
+    slideSuivante();
+  } else if (touchEndX > touchStartX + swipeThreshold) {
+    // Swipe vers la droite (slide précédente)
+    slidePrecedente();
+  }
+  // Si le décalage est trop faible, ne fait rien
+}
+
+//-----------------------------------------------------------------
 //point frise chronologique fais à l'ia
 
 // ça sert à attendre que le DOM soit chargé
