@@ -151,20 +151,6 @@ header button::before {
   rotate: 45deg;
 }
 
-header button:hover {
-  transform: translateY(-5px);
-  border: 2px solid orange;
-  color: orange;
-  background-color: rgba(255, 165, 0, 0.1);
-  cursor: pointer;
-}
-
-header button:hover::before {
-  right: 0%;
-  transition: 0.8s;
-  z-index: -1;
-}
-
 /* ------------------ main --------------------- */
 
 main {
@@ -207,10 +193,6 @@ main {
   z-index: 1001;
 }
 
-.modal i:hover {
-  cursor: pointer;
-  color: orange;
-}
 .modal {
   height: 100vh;
   width: 100%;
@@ -380,13 +362,6 @@ main {
   left: -90px;
 }
 
-#before:hover,
-#after:hover {
-  cursor: pointer;
-  border: 2px solid orange;
-  color: orange;
-}
-
 .container div {
   height: 100%;
   min-width: 100%;
@@ -440,14 +415,6 @@ main {
   z-index: 3;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden;
-}
-
-.button-esp:hover {
-  cursor: pointer;
-}
-
-.button-esp:hover::before {
-  transform: translateX(0%);
 }
 
 .button-esp::before {
@@ -518,6 +485,10 @@ nav {
   z-index: 5;
 }
 
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 nav ul {
   display: flex;
   flex-direction: row;
@@ -550,10 +521,6 @@ nav a img {
 nav #enveloppe {
   height: 20px;
   width: 24px;
-}
-
-nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .presentation-projets img {
@@ -845,10 +812,6 @@ nav a:hover {
   position: relative;
 }
 
-#section-contact > div:first-child > div > ul > li > a:hover i::before {
-  color: var(--orange);
-}
-
 .btn-cv {
   width: 250px;
   height: 50px;
@@ -886,18 +849,6 @@ nav a:hover {
   padding-top: 8px;
   background-color: white;
   transition: 0.5s;
-}
-
-.btn-cv:hover {
-  cursor: pointer;
-}
-
-.btn-cv:hover::before {
-  transform: translateY(-100%);
-}
-
-.btn-cv:hover::after {
-  transform: translateY(0%);
 }
 
 #section-contact form {
@@ -954,10 +905,6 @@ nav a:hover {
   overflow: hidden;
 }
 
-#section-contact form button:hover {
-  cursor: pointer;
-}
-
 #section-contact form button::before {
   position: absolute;
   content: "";
@@ -993,10 +940,6 @@ nav a:hover {
   font-family: "ICA";
   font-size: 1.3rem;
   z-index: 2; /* Au-dessus */
-}
-
-#section-contact form button:hover::before {
-  transform: translateX(0%);
 }
 
 #section-contact form h2 {
@@ -1050,18 +993,83 @@ footer i {
   font-size: 1.5rem;
 }
 
-footer i:hover {
-  color: var(--orange);
-}
-
-footer section div:last-child ul li a:hover {
-  text-decoration: underline var(--orange);
-}
-
 footer section div:first-child ul {
   display: flex;
   flex-direction: row;
   gap: 10px;
   justify-content: center;
   padding-top: 10px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  /* --- Header --- */
+  header button:hover {
+    transform: translateY(-5px);
+    border: 2px solid orange;
+    color: orange;
+    background-color: rgba(255, 165, 0, 0.1);
+    cursor: pointer;
+  }
+
+  header button:hover::before {
+    right: 0%;
+    transition: 0.8s;
+    z-index: -1;
+  }
+
+  /* --- Modal --- */
+  .modal i:hover {
+    cursor: pointer;
+    color: orange;
+  }
+
+  /* --- Slider Projets --- */
+  #before:hover,
+  #after:hover {
+    cursor: pointer;
+    border: 2px solid orange;
+    color: orange;
+  }
+
+  .button-esp:hover {
+    cursor: pointer;
+  }
+
+  .button-esp:hover::before {
+    transform: translateX(0%);
+  }
+
+  /* --- Contact --- */
+  #section-contact > div:first-child > div > ul > li > a:hover i::before {
+    color: var(--orange);
+  }
+
+  .btn-cv:hover {
+    cursor: pointer;
+  }
+
+  .btn-cv:hover::before {
+    transform: translateY(-100%);
+  }
+
+  .btn-cv:hover::after {
+    transform: translateY(0%);
+  }
+
+  #section-contact form button:hover {
+    cursor: pointer;
+  }
+
+  #section-contact form button:hover::before {
+    transform: translateX(0%);
+  }
+
+  /* --- Footer --- */
+  footer i:hover {
+    color: var(--orange);
+  }
+
+  footer section div:last-child ul li a:hover {
+    text-decoration: underline var(--orange);
+  }
 }
