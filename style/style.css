@@ -1,0 +1,1061 @@
+@import url("https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css");
+@import url("https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --blanc: #fff;
+  --noir: #000;
+  --bleu-lit: #1b4571;
+  --orange: orange;
+  --bleu-mur: #233242;
+  --bleu-noir: #061019;
+}
+
+@font-face {
+  font-family: "ICA"; /* le nom que tu utiliseras dans CSS */
+  src: url("../fonts/ICARubrikBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--bleu-noir);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ------------------------header------------------------- */
+
+header {
+  height: 100vh;
+  width: 100%;
+  scroll-behavior: smooth;
+  background-image: url("../image/test.gif");
+  position: relative;
+  background-size: cover;
+}
+
+@media (max-width: 900px) {
+  header {
+    background-position: center;
+  }
+
+  header button {
+    /* width: 200px !important; */
+    font-size: 1rem;
+  }
+}
+
+header div {
+  position: absolute;
+  width: fit-content;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+header h1,
+header h2,
+header h3 {
+  font-family: "ICA";
+}
+
+header h3 {
+  color: var(--blanc);
+  font-size: clamp(1rem, 2vw, 5rem);
+  padding-top: 50px;
+  text-align: center;
+}
+
+header h1 {
+  color: var(--blanc);
+  font-size: clamp(3rem, 10vw, 15rem);
+
+  text-align: center;
+}
+
+header h2 {
+  color: var(--blanc);
+  font-size: clamp(2rem, 5vw, 7rem);
+}
+
+header h2 span {
+  color: orange;
+  position: relative;
+}
+
+header h2 span::before {
+  color: orange;
+  content: "";
+}
+
+header h2 span::after {
+  content: "";
+  width: 3px;
+  height: 56%;
+  top: 56%;
+  transform: translateY(-50%);
+  background-color: orange;
+  position: absolute;
+  margin-left: 4px;
+  animation: cursor 1s step-end infinite;
+}
+
+@keyframes cursor {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+header button {
+  display: block;
+  height: 50px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  margin-top: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+header button::before {
+  position: absolute;
+  content: "";
+  width: 7px;
+  right: 125%;
+  top: 0%;
+  transform: translateY(-50%);
+  background-color: orange;
+  height: 300%;
+  rotate: 45deg;
+}
+
+header button:hover {
+  transform: translateY(-5px);
+  border: 2px solid orange;
+  color: orange;
+  background-color: rgba(255, 165, 0, 0.1);
+  cursor: pointer;
+}
+
+header button:hover::before {
+  right: 0%;
+  transition: 0.8s;
+  z-index: -1;
+}
+
+/* ------------------ main --------------------- */
+
+main {
+  height: auto;
+  width: 100%;
+  position: relative;
+  padding-top: 20px;
+}
+
+/* ------------------ sections du main ------------------   */
+
+/*sections projet*/
+
+#section-projets {
+  height: auto;
+  padding-top: 12.5vh;
+  padding-bottom: 12.5vh;
+  background: linear-gradient(var(--bleu-noir), var(--bleu-mur));
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10vw;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.modal {
+  position: absolute;
+  display: none;
+  z-index: 999 !important;
+}
+
+.modal i {
+  color: var(--blanc);
+  font-size: 2.5rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1001;
+}
+
+.modal i:hover {
+  cursor: pointer;
+  color: orange;
+}
+.modal {
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 4;
+}
+
+.modal > div {
+  height: 80vh;
+  width: clamp(100px, 90vw, 900px);
+  background-color: var(--bleu-mur);
+  /* border-radius: 25px; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  overflow-y: scroll;
+  overflow-x: none;
+  color: var(--blanc);
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--blanc);
+}
+
+.modal > div::-webkit-scrollbar {
+  width: 10px;
+}
+
+.modal > div::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 10px;
+}
+
+.modal h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: "ICA";
+}
+
+.modal .description {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding-bottom: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.modal .competences h2,
+.modal .objectifs h2,
+.modal .travail-indiv h2,
+.modal .tech-sf-acquis h2 {
+  font-family: "ICA";
+  margin-bottom: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.modal .competences li,
+.modal .objectifs li,
+.modal .travail-indiv li,
+.modal .tech-sf-acquis li {
+  /* list-style-type: disc; */
+  /* margin-left: 50px; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.modal .competences li::before,
+.modal .objectifs li:before,
+.modal .travail-indiv li:before,
+.modal .tech-sf-acquis li:before,
+.modal .competences li::after,
+.modal .objectifs li:after,
+.modal .travail-indiv li:after,
+.modal .tech-sf-acquis li:after {
+  content: "";
+}
+
+.modal .tech-sf-acquis > div {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  /* margin-left: 20px; */
+}
+
+.modal .tech-sf-acquis img {
+  width: 50px;
+}
+
+.modal img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+#section-projets h1 {
+  font-size: clamp(3rem, 5vw, 7rem);
+  color: white;
+  font-family: "ICA";
+  text-align: center;
+  padding-bottom: 20px;
+  text-align: start;
+}
+
+.wrapper {
+  position: relative;
+  height: 75vh;
+  width: clamp(100px, 80vw, 800px);
+  border-radius: 25px;
+}
+
+.container {
+  position: relative;
+  height: 75vh;
+  width: clamp(100px, 80vw, 800px);
+  background-color: transparent;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgb(54, 110, 131);
+}
+
+.presentation-projets {
+  position: relative;
+  color: white;
+  width: clamp(100px, 80vw, 500px);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.presentation-projets p {
+  line-height: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 100;
+  color: rgb(228, 223, 223);
+  position: relative;
+}
+#before,
+#after {
+  position: absolute;
+  height: 50px;
+  padding-bottom: 2px; /* pour centrer la fleche */
+  width: 50px;
+  border-radius: 100%;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  font-size: 1.5rem;
+  overflow: hidden;
+  z-index: 3;
+  top: -15px;
+}
+
+#after {
+  right: -90px;
+}
+
+#before {
+  left: -90px;
+}
+
+#before:hover,
+#after:hover {
+  cursor: pointer;
+  border: 2px solid orange;
+  color: orange;
+}
+
+.container div {
+  height: 100%;
+  min-width: 100%;
+  transition: 1s;
+}
+
+#div1,
+#div2,
+#div3 {
+  background-color: rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+#div1 h1,
+#div2 h1,
+#div3 h1 {
+  font-size: 2rem;
+  text-align: start;
+  padding-top: 20px;
+}
+
+#div1 div,
+#div2 div,
+#div3 div {
+  background-color: rgba(27, 69, 113, 0.5);
+  height: 35vh;
+  position: absolute;
+  bottom: 0;
+  backdrop-filter: blur(15px);
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#div1 div p,
+#div2 div p,
+#div3 div p {
+  color: var(--orange);
+  font-size: clamp(1rem, 1vw, 1.3rem);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button-esp {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 13px;
+  border-radius: 15px;
+  border: 1px solid var(--blanc);
+  background: linear-gradient(to right, var(--bleu-mur), var(--bleu-lit));
+  color: white;
+  z-index: 3;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+}
+
+.button-esp:hover {
+  cursor: pointer;
+}
+
+.button-esp:hover::before {
+  transform: translateX(0%);
+}
+
+.button-esp::before {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-110%);
+  background: var(--bleu-noir);
+  border-radius: 15px;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+#div1 {
+  background: url("../image/img_atos_ia.png");
+  background-size: cover;
+  background-position: bottom;
+}
+
+#div2 {
+  background: url("../image/img_resto_ramen.png");
+  background-size: cover;
+  background-position: bottom;
+}
+
+#div3 {
+  background: url("../image/west-coast.png");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.wrapper span {
+  position: absolute;
+  bottom: -70px;
+  height: auto;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: "ICA";
+  padding: 20px;
+}
+
+#div-bspan {
+  position: absolute;
+  bottom: -70px;
+  height: auto;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+}
+
+nav {
+  position: sticky;
+  height: 40px;
+  top: 20px;
+  width: 170px;
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  border-radius: 20px;
+}
+
+nav li {
+  width: 33.33%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+nav a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+nav a img {
+  height: 24px;
+}
+
+nav #enveloppe {
+  height: 20px;
+  width: 24px;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.presentation-projets img {
+  position: absolute;
+  left: 0;
+  top: 45px;
+  width: clamp(100px, 80vw, 500px);
+}
+
+@media (max-width: 1350px) {
+  .presentation-projets img {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  #section-projets {
+    padding-top: 20px;
+    /* padding-bottom: 20px; */
+  }
+}
+
+/* -------------------- section parcours ------------------- */
+
+.section-parcours {
+  background: linear-gradient(var(--bleu-mur), var(--bleu-noir));
+  height: 100vh;
+  position: relative;
+}
+
+/* NOUVEAU : Styles pour les wrappers HTML (précédemment dans le JS) */
+.parcours-scroll-container {
+  height: 300vh; /* 3x la hauteur du viewport pour le scroll */
+  position: relative;
+}
+
+.parcours-sticky-wrapper {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.section-parcours h1 {
+  color: var(--blanc);
+  font-family: "ICA";
+  font-size: clamp(3rem, 5vw, 7rem);
+  padding-top: 70px;
+  text-align: center;
+}
+
+.section-parcours svg {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -45%);
+  stroke: var(--blanc);
+}
+
+@media (max-width: 1100px) {
+  .section-parcours svg {
+    display: none;
+  }
+
+  #dot {
+    display: none;
+  }
+
+  /* NOUVEAU : Annulation des styles desktop pour le responsive */
+  .parcours-scroll-container,
+  .parcours-sticky-wrapper,
+  .section-parcours {
+    height: auto;
+    position: static;
+    overflow: visible;
+  }
+
+  .section-parcours .div1,
+  .section-parcours .div2,
+  .section-parcours .div3,
+  .section-parcours .div4,
+  .section-parcours .div5 {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    margin: auto !important;
+    margin-top: 20px !important;
+  }
+
+  .div-bottom::after {
+    display: none;
+  }
+
+  .div-top::after {
+    display: none;
+  }
+
+  .section-parcours h1 {
+    padding-top: 0px;
+    padding-bottom: 20px;
+  }
+}
+
+#dot {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  background-color: var(--orange);
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.section-parcours .div1,
+.section-parcours .div2,
+.section-parcours .div3,
+.section-parcours .div4,
+.section-parcours .div5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100px;
+  width: 200px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: var(--bleu-mur);
+  color: var(--blanc);
+  position: absolute;
+  font-family: "ICA";
+  padding: 10px;
+}
+
+.section-parcours .div1 {
+  top: 32%;
+  left: 11.5%;
+}
+
+.section-parcours .div2 {
+  top: 67%;
+  left: 27%;
+}
+
+.section-parcours .div3 {
+  top: 33.5%;
+  left: 43.5%;
+}
+
+.section-parcours .div4 {
+  top: 67%;
+  left: 60%;
+}
+
+.section-parcours .div5 {
+  top: 32%;
+  left: 75.5%;
+}
+
+.div-top::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(50%);
+  background-color: var(--blanc);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  rotate: 180deg;
+}
+
+.div-bottom::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--blanc);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  /* rotate: 180deg; */
+}
+
+/* -------------------section contact ------------ */
+
+#section-contact {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background: linear-gradient(var(--bleu-noir), var(--bleu-mur));
+}
+
+@media (max-width: 900px) {
+  #section-contact {
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+#section-contact > div {
+  width: fit-content;
+  height: 100%;
+}
+
+#section-contact > div:first-child {
+  display: flex;
+  flex-direction: column;
+}
+
+#section-contact > div:first-child > div {
+  height: 50%;
+  width: 100%;
+}
+
+#section-contact > div:first-child > div:first-child {
+  display: flex;
+  height: 50%;
+  align-items: flex-end;
+}
+
+#section-contact > div:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-ul-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+#section-contact > div:first-child > div h1 {
+  text-align: center;
+  color: white;
+  font-family: "ICA";
+  font-size: clamp(3rem, 5vw, 7rem);
+
+  max-width: 400px;
+}
+
+#section-contact > div:first-child > div > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding-top: 50px;
+}
+
+#section-contact > div:first-child > div > ul > li {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+#section-contact > div:first-child > div > ul > li > a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#section-contact > div:first-child > div > ul > li > a i::before {
+  font-size: 3rem;
+  color: white;
+}
+
+#section-contact > div:first-child > div > ul > li > a i {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#section-contact > div:first-child > div > ul > li > a:hover i::before {
+  color: var(--orange);
+}
+
+.btn-cv {
+  width: 250px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: transparent;
+  border: 2px solid white;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-cv::before {
+  content: "Télécharger CV";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-family: "ICA";
+  font-size: 1.5rem;
+  top: 0;
+  left: 0;
+  padding-top: 8px;
+  transition: 0.5s;
+}
+
+.btn-cv::after {
+  content: url("../image/telecharger.png");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  font-family: "ICA";
+  font-size: 1.5rem;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  padding-top: 8px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.btn-cv:hover {
+  cursor: pointer;
+}
+
+.btn-cv:hover::before {
+  transform: translateY(-100%);
+}
+
+.btn-cv:hover::after {
+  transform: translateY(0%);
+}
+
+#section-contact form {
+  height: 500px;
+  width: 90vw;
+  max-width: 500px;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  gap: 15px;
+  border-radius: 15px;
+  border: 1px solid var(--blanc);
+}
+
+#section-contact form label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: white;
+  font-family: "ICA";
+}
+
+#section-contact form input {
+  height: 40px;
+  padding-left: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid var(--noir);
+}
+
+#section-contact form textarea {
+  height: 150px;
+  padding: 5px;
+  resize: none;
+  border-radius: 10px;
+}
+
+#section-contact form button {
+  height: 40px;
+  width: 250px;
+  border-radius: 15px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: transparent; /* Rendre le texte du bouton transparent */
+  font-family: "ICA";
+  font-size: 1.3rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+#section-contact form button:hover {
+  cursor: pointer;
+}
+
+#section-contact form button::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: orange;
+  background-image: url("../image/dessus-davion-en-papier.png");
+  background-size: 25px 25px;
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  display: flex;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: 0.5s;
+  z-index: 1;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+#section-contact form button::after {
+  position: absolute;
+  content: "Envoyer"; /* Texte par défaut */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: "ICA";
+  font-size: 1.3rem;
+  z-index: 2; /* Au-dessus */
+}
+
+#section-contact form button:hover::before {
+  transform: translateX(0%);
+}
+
+#section-contact form h2 {
+  text-align: center;
+  color: white;
+  font-family: "ICA";
+}
+
+#section-contact form input:focus,
+#section-contact form textarea:focus {
+  outline: 2px solid var(--orange);
+}
+
+/* --------------- footer --------------- */
+footer {
+  color: var(--blanc);
+  font-family: "ICA";
+  background-color: var(--bleu-noir);
+}
+
+footer > p {
+  text-align: center;
+  padding: 20px;
+}
+
+footer section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer section div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer section div:last-child ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  /* gap: 10px; */
+}
+
+footer a {
+  color: var(--blanc);
+}
+
+footer i {
+  font-size: 1.5rem;
+}
+
+footer i:hover {
+  color: var(--orange);
+}
+
+footer section div:last-child ul li a:hover {
+  text-decoration: underline var(--orange);
+}
+
+footer section div:first-child ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  padding-top: 10px;
+}
