@@ -796,6 +796,12 @@ nav a:hover {
   gap: 100px;
 }
 
+@media (max-width: 900px) {
+  .div-ul-btn {
+    gap: 50px;
+  }
+}
+
 #section-contact > div:first-child > div h1 {
   text-align: center;
   color: white;
