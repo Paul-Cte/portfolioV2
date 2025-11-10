@@ -490,6 +490,10 @@ nav a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+nav a.actif {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 nav ul {
   display: flex;
   flex-direction: row;
@@ -819,6 +823,7 @@ nav #enveloppe {
   border: 2px solid white;
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .btn-cv::before {

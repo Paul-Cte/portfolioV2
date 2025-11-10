@@ -274,6 +274,7 @@ let contact = document.getElementById("section-contact");
 
 let section = [projets, parcours, contact];
 
+let nava = document.querySelectorAll("nav a");
 // let nav = document.querySelector("nav");
 let navA = document.querySelectorAll("nav li a");
 
@@ -282,5 +283,27 @@ navA.forEach((element) => {
     e.preventDefault();
     let indice = Array.from(navA).indexOf(element);
     section[indice].scrollIntoView({ behavior: "instant" });
+  });
+});
+
+function estIlVisible(element) {
+  let rect = element.getBoundingClientRect();
+  let hauteurFenetre =
+    window.innerHeight || document.documentElement.clientHeight;
+
+  let hautVisible = rect.top < 200 && rect.top < hauteurFenetre;
+  let basVisible = rect.bottom < 200 && rect.bottom <= hauteurFenetre;
+
+  if (hautVisible || basVisible) {
+    nava.forEach((element) => {
+      element.classList.remove("actif");
+    });
+    nava[section.indexOf(element)].classList.add("actif");
+  }
+}
+
+window.addEventListener("scroll", () => {
+  section.forEach((element) => {
+    estIlVisible(element);
   });
 });
