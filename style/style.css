@@ -322,6 +322,7 @@ main {
   flex-direction: row;
   overflow: hidden;
   box-shadow: 0px 0px 10px rgb(54, 110, 131);
+  touch-action: pan-y;
 }
 
 .presentation-projets {
@@ -365,7 +366,7 @@ main {
 .container div {
   height: 100%;
   min-width: 100%;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 #div1,
@@ -551,9 +552,8 @@ nav #enveloppe {
   position: relative;
 }
 
-/* NOUVEAU : Styles pour les wrappers HTML (précédemment dans le JS) */
 .parcours-scroll-container {
-  height: 300vh; /* 3x la hauteur du viewport pour le scroll */
+  height: 300vh;
   position: relative;
 }
 
@@ -589,7 +589,6 @@ nav #enveloppe {
     display: none;
   }
 
-  /* NOUVEAU : Annulation des styles desktop pour le responsive */
   .parcours-scroll-container,
   .parcours-sticky-wrapper,
   .section-parcours {

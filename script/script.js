@@ -102,18 +102,14 @@ if (sliderContainer) {
   });
 }
 
-// Calcule la direction du swipe
 function handleSwipe() {
   const swipeThreshold = 30; // Décalage minimum en pixels pour valider un swipe
 
   if (touchEndX < touchStartX - swipeThreshold) {
-    // Swipe vers la gauche (slide suivante)
     slideSuivante();
   } else if (touchEndX > touchStartX + swipeThreshold) {
-    // Swipe vers la droite (slide précédente)
     slidePrecedente();
   }
-  // Si le décalage est trop faible, ne fait rien
 }
 
 //-----------------------------------------------------------------
