@@ -103,7 +103,7 @@ if (sliderContainer) {
 }
 
 function handleSwipe() {
-  const swipeThreshold = 30; // Décalage minimum en pixels pour valider un swipe
+  const swipeThreshold = 50; // Décalage minimum en pixels pour valider un swipe
 
   if (touchEndX < touchStartX - swipeThreshold) {
     slideSuivante();

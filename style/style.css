@@ -366,7 +366,7 @@ main {
 .container div {
   height: 100%;
   min-width: 100%;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 #div1,
