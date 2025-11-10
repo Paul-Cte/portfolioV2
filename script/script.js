@@ -45,20 +45,17 @@ let avancer = document.getElementById("after");
 let reculer = document.getElementById("before");
 const spanCounterSlide = document.querySelector(".wrapper span");
 
-// Variables pour le swipe
 let touchStartX = 0;
 let touchEndX = 0;
 
 spanCounterSlide.textContent = divCourante + 1 + "/" + nbrDeDiv;
 reculer.style.visibility = "hidden";
 
-// Logique pour avancer
 function slideSuivante() {
   if (divCourante < nbrDeDiv - 1) {
     divCourante++;
     reculer.style.visibility = "visible";
     if (divCourante === nbrDeDiv - 1) {
-      // Corrigé (c'était "2")
       avancer.style.visibility = "hidden";
     }
   }
@@ -77,7 +74,6 @@ function slidePrecedente() {
   TranslateSlider();
 }
 
-// Fonction qui bouge le slider
 function TranslateSlider() {
   spanCounterSlide.textContent = divCourante + 1 + "/" + nbrDeDiv;
   const pourcentageDecalage = -divCourante * 100;
@@ -86,13 +82,9 @@ function TranslateSlider() {
   );
 }
 
-// --- Écouteurs d'événements ---
-
-// Clics sur les boutons
 avancer.addEventListener("click", slideSuivante);
 reculer.addEventListener("click", slidePrecedente);
 
-// Gestion du swipe tactile
 if (sliderContainer) {
   sliderContainer.addEventListener(
     "touchstart",
@@ -112,7 +104,7 @@ if (sliderContainer) {
 
 // Calcule la direction du swipe
 function handleSwipe() {
-  const swipeThreshold = 50; // Décalage minimum en pixels pour valider un swipe
+  const swipeThreshold = 30; // Décalage minimum en pixels pour valider un swipe
 
   if (touchEndX < touchStartX - swipeThreshold) {
     // Swipe vers la gauche (slide suivante)
