@@ -1,2 +1,3 @@
 #pour le fichier .env
 .env.local
+vendor/
