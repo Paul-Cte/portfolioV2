@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Paul Comte - Portfolio Développeur Web</title>
+    <meta name="description" content="Venez découvrir mon portfolio,je suis en apprentissage pour être développeur web. découvrez mes projets en HTML, CSS, JavaScript et PHP, mon parcours et un formulaire de contact.">
     <link rel="stylesheet" href="public/style/style.css" />
       <link rel="icon" type="image/x-icon" href="public/image/faviconpcsf.ico">
   </head>
@@ -366,7 +367,7 @@
         </div>
         <div class="footer-div-link">
           <ul>
-            <li><a href="#">Mentions légales</a></li>
+            <li><a href="views/mentions-legales.php">Mentions légales</a></li>
           </ul>
         </div>
       </section>

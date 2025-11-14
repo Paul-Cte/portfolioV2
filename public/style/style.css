@@ -343,7 +343,9 @@ main {
 #after {
   position: absolute;
   height: 50px;
-  padding-bottom: 2px; /* pour centrer la fleche */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50px;
   border-radius: 100%;
   background-color: transparent;
@@ -353,6 +355,8 @@ main {
   overflow: hidden;
   z-index: 3;
   top: -15px;
+  padding-bottom: 2px;
+  line-height: normal;
 }
 
 #after {
