@@ -308,16 +308,10 @@ window.addEventListener("scroll", () => {
   });
 });
 
-//timer pour faire disparaitre les messages apres 5 secondes
+//message de confirmation ou d'erreur formulaire contact
 let divMsg = document.getElementById("div-message");
 let btnFermerMesg = document.getElementById("btn-fermer-msg");
 
-btnFermerMesg.addEventListener("click", () => {
-  divMsg.style.display = "none";
+btnFermerMesg?.addEventListener("click", () => {
+  divMsg?.style.display = "none";
 });
-
-// if (divMsg) {
-//   setTimeout(() => {
-//     divMsg.style.display = "none";
-//   }, 5000);
-// }
