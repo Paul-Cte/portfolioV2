@@ -312,6 +312,8 @@ window.addEventListener("scroll", () => {
 let divMsg = document.getElementById("div-message");
 let btnFermerMesg = document.getElementById("btn-fermer-msg");
 
-btnFermerMesg?.addEventListener("click", () => {
-  divMsg?.style.display = "none";
-});
+if (divMsg && btnFermerMesg) {
+  btnFermerMesg.addEventListener("click", () => {
+    divMsg.style.display = "none";
+  });
+}
