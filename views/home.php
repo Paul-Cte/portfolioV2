@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="public/style/style.css" />
+    <link rel="stylesheet" href="../public/style/style.css" />
   </head>
 
   <body>
@@ -54,10 +54,10 @@
         <div class="tech-sf-acquis">
           <h2>Technologies et savoir-faire acquis</h2>
           <div>
-            <img src="public/image/html-5.png" alt="logo-html" /><img
-              src="public/image/css-3.png"
+            <img src="../public/image/html-5.png" alt="logo-html" /><img
+              src="../public/image/css-3.png"
               alt="logo-css"
-            /><img src="public/image/script-java.png" alt="logo-js" />
+            /><img src="../public/image/script-java.png" alt="logo-js" />
           </div>
 
           <ul>
@@ -65,9 +65,9 @@
             <li>Utilisation de Whimsical</li>
           </ul>
         </div>
-        <img src="public/image/atos.png" alt="" />
-        <img src="public/image/atos2.png" alt="" />
-        <img src="public/image/atos3.png" alt="" />
+        <img src="../public/image/atos.png" alt="" />
+        <img src="../public/image/atos2.png" alt="" />
+        <img src="../public/image/atos3.png" alt="" />
       </div>
     </div>
 
@@ -102,17 +102,17 @@
         <div class="tech-sf-acquis">
           <h2>Technologies et savoir-faire acquis</h2>
           <div>
-            <img src="public/image/html-5.png" alt="logo-html" /><img
+            <img src="../public/image/html-5.png" alt="logo-html" /><img
               src="public/image/css-3.png"
               alt="logo-css"
-            /><img src="public/image/script-java.png" alt="logo-js" />
+            /><img src="../public/image/script-java.png" alt="logo-js" />
           </div>
         </div>
-        <img src="public/image/resto_.png" alt="" />
-        <img src="public/image/resto.png" alt="" />
-        <img src="public/image/resto3.png" alt="" />
-        <img src="public/image/resto4.png" alt="" />
-        <img src="public/image/resto5.png" alt="" />
+        <img src="../public/image/resto_.png" alt="" />
+        <img src="../public/image/resto.png" alt="" />
+        <img src="../public/image/resto3.png" alt="" />
+        <img src="../public/image/resto4.png" alt="" />
+        <img src="../public/image/resto5.png" alt="" />
       </div>
     </div>
 
@@ -129,17 +129,17 @@
         <ul>
           <li>
             <a href="#section-projets"
-              ><img src="public/image/code.png" alt=""
+              ><img src="../public/image/code.png" alt=""
             /></a>
           </li>
           <li>
             <a href="#section-parcours"
-              ><img src="public/image/lobtention-du-diplome.png" alt=""
+              ><img src="../public/image/lobtention-du-diplome.png" alt=""
             /></a>
           </li>
           <li>
             <a href="#section-contact"
-              ><img id="enveloppe" src="public/image/enveloppe.png" alt=""
+              ><img id="enveloppe" src="../public/image/enveloppe.png" alt=""
             /></a>
           </li>
         </ul>
@@ -153,7 +153,7 @@
             personnels, j’ai réalisé de nombreux projets de développement web,
             car c’est ce qui m’intéresse le plus. Pour en savoir plus,
             rendez-vous dans le slider !
-            <img src="public/image/soulignement.png" alt="" />
+            <img src="../public/image/soulignement.png" alt="" />
           </p>
         </div>
 
@@ -289,7 +289,8 @@
           </div>
         </div>
         <div>
-          <form action="/send-email" method="post">
+          <form action="index.php" method="post">
+            <input type="hidden" name="action" value="send-mail">
             <h2>Contactez-moi ici:</h2>
             <label for="nom"
               >Nom
@@ -356,6 +357,6 @@
       </section>
       <p>&copy; 2025 Paul Comte. Tous droits réservés.</p>
     </footer>
-    <script src="public/script/script.js"></script>
+    <script src="../public/script/script.js"></script>
   </body>
 </html>
