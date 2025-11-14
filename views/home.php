@@ -291,13 +291,20 @@
         <div>
           <form action="index.php" method="post">
             <input type="hidden" name="action" value="send-mail">
+            
             <?php if(isset($statusMessage)): ?>
-                <?php if($statusMessage['type'] === 'error'): ?>
-                    <p class="msg-erreur">Erreur lors de l'envoi du message.</p>
-                <?php elseif($statusMessage['type'] === 'success'): ?>
-              <p class="msg-reussite">Le message a été envoyé avec succès !</p>
-              <?php endif; ?>
+              <div id="div-message" class="div-message">
+                  <?php if($statusMessage['type'] === 'error'): ?>
+                      <h1>Mince !</h1>
+                      <p class="msg-erreur">Une erreur lors de l'envoi du message.</p>
+                  <?php elseif($statusMessage['type'] === 'success'): ?>
+                      <h1>Merci !</h1>
+                      <p class="msg-reussite">Le message a été envoyé avec succès !</p>
+                <?php endif; ?>
+                  <button id="btn-fermer-msg">X</button>
+              </div>
             <?php endif; ?>
+
             <h2>Contactez-moi ici:</h2>
             <label for="nom"
               >Nom
@@ -329,7 +336,7 @@
                 required
               ></textarea>
             </label>
-            <button type="submit"></button>
+            <button id="btn-envoyer" type="submit"></button>
           </form>
         </div>
       </section>

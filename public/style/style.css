@@ -872,28 +872,63 @@ nav #enveloppe {
   position: relative;
 }
 
-p.msg-reussite {
+form h1 {
+  color: var(--blanc);
+  font-family: "ICA";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  top: 40%;
+}
+
+#btn-fermer-msg {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  font-size: 1.5rem;
+  color: var(--blanc);
+  cursor: pointer;
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  line-height: 1;
+}
+
+#btn-fermer-msg:hover {
+  opacity: 0.7;
+}
+
+.div-message {
+  position: absolute;
+  height: 500px;
+  width: 90vw;
+  max-width: 500px;
+  top: 0;
+  left: 0;
+  background-color: var(--bleu-mur);
+  z-index: 4;
+  border-radius: 15px;
+  border-right: 1px solid var(--blanc);
+  border-bottom: 1px solid var(--blanc);
+}
+p.msg-reussite,
+p.msg-erreur {
   color: green;
   font-family: "ICA";
   font-size: 1rem;
   font-style: italic;
   position: absolute;
-  bottom: -30px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   width: max-content;
 }
 
 p.msg-erreur {
   color: red;
-  font-family: "ICA";
-  font-size: 1rem;
-  font-style: italic;
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
 }
 #section-contact form label {
   display: flex;
@@ -918,7 +953,7 @@ p.msg-erreur {
   border-radius: 10px;
 }
 
-#section-contact form button {
+#section-contact form #btn-envoyer {
   height: 40px;
   min-height: 40px;
   width: 250px;
@@ -934,7 +969,7 @@ p.msg-erreur {
   overflow: hidden;
 }
 
-#section-contact form button::before {
+#section-contact form #btn-envoyer::before {
   position: absolute;
   content: "";
   width: 100%;
@@ -955,7 +990,7 @@ p.msg-erreur {
   border-bottom-right-radius: 12px;
 }
 
-#section-contact form button::after {
+#section-contact form #btn-envoyer::after {
   position: absolute;
   content: "Envoyer"; /* Texte par défaut */
   width: 100%;
