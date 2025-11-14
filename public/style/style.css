@@ -871,6 +871,21 @@ nav #enveloppe {
   border: 1px solid var(--blanc);
 }
 
+form .message-reussite {
+  text-align: center;
+  color: green;
+  font-family: "ICA";
+  font-size: 1rem;
+  font-style: italic;
+}
+
+form .message-erreur {
+  text-align: center;
+  color: red;
+  font-family: "ICA";
+  font-size: 1rem;
+  font-style: italic;
+}
 #section-contact form label {
   display: flex;
   flex-direction: column;

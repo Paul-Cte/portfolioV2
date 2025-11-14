@@ -291,6 +291,13 @@
         <div>
           <form action="index.php" method="post">
             <input type="hidden" name="action" value="send-mail">
+            <?php if(isset($statusMessage)): ?>
+                <?php if($statusMessage['type'] === 'error'): ?>
+                    <div class="msg-erreur"><p>Erreur lors de l'envoi du message.</p></div>
+                <?php elseif($statusMessage['type'] === 'success'): ?>
+              <div class="msg-reussite"><p>Le message a été envoyé avec succès !</p></div>
+              <?php endif; ?>
+            <?php endif; ?>
             <h2>Contactez-moi ici:</h2>
             <label for="nom"
               >Nom
