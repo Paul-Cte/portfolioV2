@@ -871,7 +871,7 @@ nav #enveloppe {
   border: 1px solid var(--blanc);
 }
 
-form .message-reussite {
+form .msg-reussite {
   text-align: center;
   color: green;
   font-family: "ICA";
@@ -879,7 +879,7 @@ form .message-reussite {
   font-style: italic;
 }
 
-form .message-erreur {
+form .msg-erreur {
   text-align: center;
   color: red;
   font-family: "ICA";
