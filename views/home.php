@@ -293,9 +293,9 @@
             <input type="hidden" name="action" value="send-mail">
             <?php if(isset($statusMessage)): ?>
                 <?php if($statusMessage['type'] === 'error'): ?>
-                    <div class="msg-erreur"><p>Erreur lors de l'envoi du message.</p></div>
+                    <p class="msg-erreur">Erreur lors de l'envoi du message.</p>
                 <?php elseif($statusMessage['type'] === 'success'): ?>
-              <div class="msg-reussite"><p>Le message a été envoyé avec succès !</p></div>
+              <p class="msg-reussite">Le message a été envoyé avec succès !</p>
               <?php endif; ?>
             <?php endif; ?>
             <h2>Contactez-moi ici:</h2>
