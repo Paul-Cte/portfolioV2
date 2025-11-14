@@ -881,6 +881,7 @@ p.msg-reussite {
   bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
+  width: max-content;
 }
 
 p.msg-erreur {
@@ -892,6 +893,7 @@ p.msg-erreur {
   bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
+  width: max-content;
 }
 #section-contact form label {
   display: flex;
