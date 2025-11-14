@@ -307,3 +307,17 @@ window.addEventListener("scroll", () => {
     estIlVisible(element);
   });
 });
+
+//timer pour faire disparaitre les messages apres 5 secondes
+let divMsg = document.getElementById("div-message");
+let btnFermerMesg = document.getElementById("btn-fermer-msg");
+
+btnFermerMesg.addEventListener("click", () => {
+  divMsg.style.display = "none";
+});
+
+// if (divMsg) {
+//   setTimeout(() => {
+//     divMsg.style.display = "none";
+//   }, 5000);
+// }
