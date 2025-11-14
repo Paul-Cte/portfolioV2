@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="public/style/style.css" />
+      <link rel="icon" type="image/x-icon" href="public/image/faviconpcsf.ico">
   </head>
 
   <body>
