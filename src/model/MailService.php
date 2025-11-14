@@ -13,7 +13,7 @@ class MailService {
         
         // C'est la ligne clé pour alwaysdata
         // Assure-toi de créer cette variable d'environnement dans ton panel alwaysdata
-        $dsn = $_ENV['MAILER_DSN'] ?? 'smtp://paulcte@alwaysdata.net:%40Xeij28el38210always@smtp.alwaysdata.net:587';
+        $dsn = $_ENV['MAILER_DSN'];
 
         $transport = Transport::fromDsn($dsn);
         $mailer = new Mailer($transport);
