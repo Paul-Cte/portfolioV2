@@ -911,6 +911,7 @@ nav #enveloppe {
 
 #section-contact form button {
   height: 40px;
+  min-height: 40px;
   width: 250px;
   border-radius: 15px;
   border: 2px solid white;
