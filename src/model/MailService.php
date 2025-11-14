@@ -10,9 +10,7 @@ use Symfony\Component\Mailer\Exception\TransportExceptionInterface;
 class MailService {
 
     public function sendContactEmail($name, $fromEmail, $body) {
-        
-        // C'est la ligne clé pour alwaysdata
-        // Assure-toi de créer cette variable d'environnement dans ton panel alwaysdata
+
         $dsn = $_ENV['MAILER_DSN'];
 
         $transport = Transport::fromDsn($dsn);
@@ -34,8 +32,6 @@ class MailService {
             $mailer->send($email);
             return true;
         } catch (TransportExceptionInterface $e) {
-            // En cas d'erreur
-            // error_log($e->getMessage()); // Pour le debug en production
             return false;
         }
     }

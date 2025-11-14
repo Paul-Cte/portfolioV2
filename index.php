@@ -4,7 +4,7 @@ session_start();
 
 require_once 'src/controller/PageController.php';
 
-// Inclure l'autoloader de Composer (très important!)
+// autoloader de Composer 
 require_once 'vendor/autoload.php';
 
 use portfolioV2\controller\PageController;

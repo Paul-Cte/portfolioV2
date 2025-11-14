@@ -11,7 +11,6 @@ class PageController {
 
     // Affiche la page d'accueil (notre portfolio)
     public function home() {
-        // Récupérer le message de statut (s'il existe)
         $statusMessage = $_SESSION['status_message'] ?? null;
         unset($_SESSION['status_message']);
         
