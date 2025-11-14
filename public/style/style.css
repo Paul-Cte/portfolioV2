@@ -872,19 +872,19 @@ nav #enveloppe {
 }
 
 .msg-reussite {
-  text-align: center;
-  color: green;
-  font-family: "ICA";
-  font-size: 1rem;
-  font-style: italic;
+  text-align: center !important;
+  color: green !important;
+  font-family: "ICA" !important;
+  font-size: 1rem !important;
+  font-style: italic !important;
 }
 
 .msg-erreur {
-  text-align: center;
-  color: red;
-  font-family: "ICA";
-  font-size: 1rem;
-  font-style: italic;
+  text-align: center !important;
+  color: red !important;
+  font-family: "ICA" !important;
+  font-size: 1rem !important;
+  font-style: italic !important;
 }
 #section-contact form label {
   display: flex;
