@@ -105,9 +105,11 @@
         </p>
         Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a><br>
         <a href="https://www.flaticon.com/free-icons/graduation-cap" title="graduation cap icons">Graduation cap icons created by Iconiyo - Flaticon</a><br>
-        <a href="https://www.flaticon.com/free-icons/code" title="code icons">Code icons created by KP Arts - Flaticon</a>
-        <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a>
-        
+        <a href="https://www.flaticon.com/free-icons/code" title="code icons">Code icons created by KP Arts - Flaticon</a><br>
+        <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by riajulislam - Flaticon</a><br>
+        <a href="https://www.flaticon.com/free-icons/css" title="css icons">Css icons created by Pixel perfect - Flaticon</a><br>
+        <a href="https://www.flaticon.com/free-icons/html" title="html icons">Html icons created by Freepik - Flaticon</a><br>
+        <a href="https://www.flaticon.com/free-icons/javascript" title="javascript icons">Javascript icons created by edt.im - Flaticon</a><br>
         <p>
             Toute reproduction ou représentation, en tout ou partie, à d'autres fins que l'usage privé, sur un quelconque support est interdite sans autorisation expresse et préalable de l'éditeur du site.
         </p>

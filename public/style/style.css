@@ -375,14 +375,20 @@ main {
 
 #div1,
 #div2,
-#div3 {
+#div3,
+#div4,
+#div5,
+#div6 {
   background-color: rgba(255, 255, 255, 0.1);
   position: relative;
 }
 
 #div1 h1,
 #div2 h1,
-#div3 h1 {
+#div3 h1,
+#div4 h1,
+#div5 h1,
+#div6 h1 {
   font-size: 2rem;
   text-align: start;
   padding-top: 20px;
@@ -390,7 +396,10 @@ main {
 
 #div1 div,
 #div2 div,
-#div3 div {
+#div3 div,
+#div4 div,
+#div5 div,
+#div6 div {
   background-color: rgba(27, 69, 113, 0.5);
   height: 35vh;
   position: absolute;
@@ -402,7 +411,10 @@ main {
 
 #div1 div p,
 #div2 div p,
-#div3 div p {
+#div3 div p,
+#div4 div p,
+#div5 div p,
+#div6 div p {
   color: var(--orange);
   font-size: clamp(1rem, 1vw, 1.3rem);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -449,9 +461,27 @@ main {
 }
 
 #div3 {
-  background: url("../image/west-coast.png");
+  background: url("../image/img_projet_aidant.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#div4 {
+  background: url("../image/img_projet_joao.png");
+  background-size: cover;
+  background-position: center;
+}
+
+#div5 {
+  background: url("../image/img_projet_pokemon.png");
   background-size: cover;
   background-position: bottom;
+}
+
+#div6 {
+  background: url("../image/img_projet_citation.png");
+  background-size: cover;
+  background-position: center;
 }
 
 .wrapper span {

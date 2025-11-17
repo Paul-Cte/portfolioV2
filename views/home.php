@@ -126,6 +126,161 @@
       </div>
     </div>
 
+    <div class="modal modal4">
+      <i class="fi fi-ss-circle-xmark"></i>
+      <div>
+        <h1>Projet Fan-Page João Neves</h1>
+        <div class="description">
+          Petit projet personnel réalisé pour m'entraîner à superposer du texte et des images, en m'inspirant d'une technique de design spécifique.
+        </div>
+        <div class="competences">
+          <h2>Compétences acquises</h2>
+          <ul>
+            <li>Superposition avancée d'éléments (z-index, position absolute)</li>
+            <li>Animations CSS (transform, @keyframes)</li>
+            <li>JavaScript pour l'interactivité (IntersectionObserver, smooth scroll)</li>
+            <li>Effets de design (backdrop-filter, drop-shadow, filtres)</li>
+          </ul>
+        </div>
+        <div class="objectifs">
+          <h2>Objectifs</h2>
+          <ul>
+            <li>Créer une page de type "one-page" avec navigation fluide.</li>
+            <li>Implémenter un effet de superposition texte/image dynamique.</li>
+            <li>Utiliser l'IntersectionObserver pour suivre la section visible.</li>
+            <li>Ajouter un effet de suivi de curseur (mousemove).</li>
+          </ul>
+        </div>
+        <div class="travail-indiv">
+          <h2>Travail individuel</h2>
+          <ul>
+            <li>Intégration HTML/CSS de la maquette.</li>
+            <li>Développement des scripts de navigation et d'animation (scroll, curseur).</li>
+          </ul>
+        </div>
+        <div class="tech-sf-acquis">
+          <h2>Technologies et savoir-faire acquis</h2>
+          <div>
+            <!-- ici pour mettre image technologies si y'en a -->
+          </div>
+
+          <ul>
+            <li>Utilisation de l'IntersectionObserver API</li>
+            <li>Animations et transitions CSS avancées</li>
+            <li>Gestion des événements DOM (scroll, mousemove)</li>
+          </ul>
+        </div>
+        <!-- img projet  -->
+         <img src="public/image/page1_joao.png" alt="">
+      </div>
+    </div>
+
+    <div class="modal modal5">
+      <i class="fi fi-ss-circle-xmark"></i>
+      <div>
+        <h1>Site Vitrine Pokémon</h1>
+        <div class="description">
+          Projet de création d'un site web vitrine pour présenter une (fausse) nouvelle collection de cartes Pokémon. L'accent est mis sur l'interactivité JavaScript, notamment la gestion d'onglets et d'une modale (overlay).
+        </div>
+        <div class="competences">
+          <h2>Compétences acquises</h2>
+          <ul>
+            <li>Gestion des événements JavaScript (click)</li>
+            <li>Manipulation du DOM (ajout/suppression de classes "active")</li>
+            <li>Création et gestion d'une modale (overlay) pour zoomer</li>
+            <li>Utilisation de `position: sticky` pour le menu</li>
+            <li>Styling avec @font-face et animations CSS</li>
+          </ul>
+        </div>
+        <div class="objectifs">
+          <h2>Objectifs</h2>
+          <ul>
+            <li>Permettre à l'utilisateur de basculer entre deux onglets (Boosters / Cartes).</li>
+            <li>Implémenter une modale (overlay) qui s'affiche au clic sur une carte.</li>
+            <li>Fermer la modale au clic sur un bouton.</li>
+            <li>Structurer une page de présentation de produit (concours, formulaire).</li>
+          </ul>
+        </div>
+        <div class="travail-indiv">
+          <h2>Travail individuel</h2>
+          <ul>
+            <li>Développement de la logique d'onglets en JavaScript.</li>
+            <li>Création du système d'overlay (ouverture/fermeture).</li>
+            <li>Intégration de la maquette et des animations CSS.</li>
+          </ul>
+        </div>
+        <div class="tech-sf-acquis">
+          <h2>Technologies et savoir-faire acquis</h2>
+          <div>
+                        <!-- ici pour mettre image technologies si y'en a -->
+          </div>
+
+          <ul>
+            <li>Manipulation d'événements DOM</li>
+            <li>Création de modales (overlay)</li>
+            <li>Utilisation de polices personnalisées (@font-face)</li>
+          </ul>
+        </div>
+          <img src="public/image/page1_pokemon.png" alt="">
+          <img src="public/image/page2_pokemon.png" alt="">
+          <img src="public/image/page3_pokemon.png" alt="">
+          <img src="public/image/page4_pokemon.png" alt="">
+          <img src="public/image/page5_pokemon.png" alt="">
+      </div>
+    </div>
+
+    <div class="modal modal6">
+      <i class="fi fi-ss-circle-xmark"></i>
+      <div>
+        <h1>Projet Générateur de Citations</h1>
+        <div class="description">
+          Un générateur de citations aléatoires avec un espace administrateur. Le site utilise PHP pour se connecter à une base de données MySQL pour charger de nouvelles citations.
+        </div>
+        <div class="competences">
+          <h2>Compétences acquises</h2>
+          <ul>
+            <li>Logique backend en PHP</li>
+            <li>Connexion à une base de données MySQL (via WAMP)</li>
+            <li>Système d'authentification simple (login/session PHP)</li>
+            <li>Opérations CRUD (Create, Read, Delete) en PHP/SQL</li>
+          </ul>
+        </div>
+        <div class="objectifs">
+          <h2>Objectifs</h2>
+          <ul>
+            <li>Stocker et lire des citations depuis une base de données MySQL.</li>
+            <li>Afficher une citation aléatoire au chargement.</li>
+            <li>Créer un espace administrateur protégé par mot de passe.</li>
+            <li>Permettre l'ajout et la suppression de citations via l'espace admin.</li>
+          </ul>
+        </div>
+        <div class="travail-indiv">
+          <h2>Travail individuel</h2>
+          <ul>
+            <li>Script PHP pour la connexion BDD (`connexionbdd.php`).</li>
+            <li>Script PHP pour récupérer une citation aléatoire (`code.php`).</li>
+            <li>Développement de l'espace admin (login, ajout, suppression).</li>
+            <li>Création de la structure SQL.</li>
+          </ul>
+        </div>
+        <div class="tech-sf-acquis">
+          <h2>Technologies et savoir-faire acquis</h2>
+          <div>
+                        <!-- ici pour mettre image technologies si y'en a -->
+          </div>
+
+          <ul>
+            <li>PHP</li>
+            <li>MySQL (via WAMP)</li>
+            <li>Gestion de sessions PHP</li>
+          </ul>
+        </div>
+          <img src="public/image/page1_citation.png" alt="">
+          <img src="public/image/page2_citation.png" alt="">
+          <img src="public/image/page3_citation.png" alt="">
+        </div>
+    </div>
+
     <main>
       <nav>
         <ul>
@@ -189,6 +344,29 @@
                   s'occuper de personnes agées dépendante d'eux."
                 </p>
               </div>
+            </div>
+            <div id="div4">
+              <button class="button-esp">En savoir plus</button>
+              <div>
+                <h1>Site Web Joao Neves</h1>
+                <p>
+                  "Développement d'un site web pour m'entrainer à utiliser des effets de superposition texte/image et d'effet au scroll."
+                </p>
+              </div>
+            </div>
+            <div id="div5">
+              <button class="button-esp">En savoir plus</button>
+              <div>
+                <h1>Site Web Pokémon</h1>
+                <p>
+                  "Développement d'un site web pour présenter une nouvelle collection de cartes Pokémon, avec gestion d'onglets et modale en JavaScript."</p></div>
+            </div>
+            <div id="div6">
+              <button class="button-esp">En savoir plus</button>
+              <div>
+                <h1>Site Web Génération citation</h1>
+                <p>
+                  "Développement d'un site web pour m'entrainer à la manipulation d'une BD en php"</p></div>
             </div>
           </div>
           <div id="div-bspan">

@@ -19,7 +19,7 @@ class PageController {
 
     public function sendMail() {
         $name = htmlspecialchars($_POST['nom'] ?? '');
-        $email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);
+        $email = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);  // la méthode permet d'enlever les espaces et les trucs indésirables      
         $message = htmlspecialchars($_POST['message'] ?? '');
 
         if (empty($name) || empty($email) || empty($message) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
