@@ -112,110 +112,110 @@ function handleSwipe() {
   }
 }
 
-//-----------------------------------------------------------------
-//point frise chronologique fais à l'ia
+//---------------------------------------point frise chronologique--------------------------------
 
-// ça sert à attendre que le DOM soit chargé
 document.addEventListener("DOMContentLoaded", function () {
   const path = document.getElementById("parcours-path");
   const dot = document.getElementById("dot");
   const section = document.querySelector(".section-parcours");
   const svg = document.getElementById("parcours-svg");
-
   const scrollContainer = document.querySelector(".parcours-scroll-container");
 
-  // Si les éléments n'existent pas (ex: mobile),
-  // on arrête le script pour cette fonctionnalité.
+  // Vérification de base
   if (!path || !dot || !section || !svg || !scrollContainer) {
-    return;
-  }
-
-  const pathLength = path.getTotalLength();
-
-  // Fail-safe si le SVG est caché (ex: display:none sur mobile)
-  if (pathLength === 0) {
     return;
   }
 
   let dotHasBeenVisible = false;
 
-  function isSectionFullyVisible(section) {
+  function isSectionVisibleEnough(section) {
     const rect = section.getBoundingClientRect();
     const sectionHeight = rect.height;
-    // éviter la division par zéro
     if (sectionHeight === 0) return false;
+
     const visibleHeight =
       Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0);
-    return visibleHeight >= sectionHeight * 1;
+
+    //On demande 90% de visibilité au cas où les scrollbars faussent le calcul
+    return visibleHeight >= sectionHeight * 0.9;
   }
 
   function updateDotPosition() {
-    // ne pas faire de calculs si l'animation n'est pas visible
-    if (
-      path.getTotalLength() === 0 ||
-      scrollContainer.offsetHeight <= window.innerHeight
-    ) {
+    // 1. On vérifie si le SVG est affiché
+    const style = window.getComputedStyle(svg);
+    if (style.display === "none") {
       return;
     }
 
-    // positionne le point au début du SVG
+    // 2. On récupère la longueur actuelle
+    const currentPathLength = path.getTotalLength();
+    if (currentPathLength === 0) return;
+
+    // Si le conteneur n'est pas scrollable (ex: pas assez de hauteur), on arrête
+    if (scrollContainer.offsetHeight <= window.innerHeight) {
+      return;
+    }
+
+    // --- DIMENSIONS & POSITIONS  ---
+    const sectionWidth = section.offsetWidth;
+    const sectionHeight = section.offsetHeight;
+
+    // Les constantes CSS (80% width, 300px height)
+    const svgWidth = sectionWidth * 0.8;
+    const svgHeight = 300;
+
+    // Calcul des offsets pour centrer le point
+    const svgLeft = (sectionWidth - svgWidth) / 2;
+    // top: 55% avec translate -45%
+    const svgTop = sectionHeight * 0.55 - svgHeight * 0.45;
+
+    // --- ETAPE 1 : Initialisation ---
     if (!dotHasBeenVisible) {
+      // On place le point au début (index 0)
       const point = path.getPointAtLength(0);
-      const svgRect = svg.getBoundingClientRect();
-      const sectionRect = section.getBoundingClientRect();
-
-      if (svgRect.width === 0) return;
-
-      const svgWidth = svgRect.width;
-      const svgHeight = svgRect.height;
       const dotWidth = dot.offsetWidth;
       const dotHeight = dot.offsetHeight;
-      const dotX =
-        svgRect.left - sectionRect.left + (point.x / 1200) * svgWidth;
-      const dotY = svgRect.top - sectionRect.top + (point.y / 200) * svgHeight;
+
+      const dotX = svgLeft + (point.x / 1200) * svgWidth;
+      const dotY = svgTop + (point.y / 200) * svgHeight;
+
       dot.style.left = `${dotX - dotWidth / 2}px`;
       dot.style.top = `${dotY - dotHeight / 2}px`;
 
-      if (isSectionFullyVisible(section)) {
+      // Si la section est visible (à 90%), on active l'animation pour la suite
+      if (isSectionVisibleEnough(section)) {
         dotHasBeenVisible = true;
       }
       return;
     }
 
-    // Comportement normal après avoir été vu une fois
-    if (!isSectionFullyVisible(section)) {
-      return;
-    }
+    // --- ETAPE 2 : Animation au scroll ---
 
-    // Position du conteneur de scroll
+    // Calcul de la progression basé sur le scroll container parent (300vh)
     const containerRect = scrollContainer.getBoundingClientRect();
-    const containerTop = containerRect.top;
     const containerHeight = scrollContainer.offsetHeight;
 
-    // Calculer la progression (0 à 1) basée sur le scroll du conteneur
-    let progress =
-      Math.abs(containerTop) / (containerHeight - window.innerHeight);
+    // Si on est au-dessus du début, progression = 0
+    let progress = 0;
+
+    if (containerRect.top < 0) {
+      progress =
+        Math.abs(containerRect.top) / (containerHeight - window.innerHeight);
+    }
+
+    // On borne entre 0 et 1
     progress = Math.max(0, Math.min(1, progress));
 
-    // Obtenir le point sur le path
-    const distance = progress * pathLength;
+    const distance = progress * currentPathLength;
     const point = path.getPointAtLength(distance);
 
-    // Position du SVG par rapport à la section
-    const svgRect = svg.getBoundingClientRect();
-    const sectionRect = section.getBoundingClientRect();
-
-    if (svgRect.width === 0) return;
-
-    const svgWidth = svgRect.width;
-    const svgHeight = svgRect.height;
-
-    // Positionner le dot
-    const dotX = svgRect.left - sectionRect.left + (point.x / 1200) * svgWidth;
-    const dotY = svgRect.top - sectionRect.top + (point.y / 200) * svgHeight;
-
+    // Positionnement final
     const dotWidth = dot.offsetWidth;
     const dotHeight = dot.offsetHeight;
+
+    const dotX = svgLeft + (point.x / 1200) * svgWidth;
+    const dotY = svgTop + (point.y / 200) * svgHeight;
+
     dot.style.left = `${dotX - dotWidth / 2}px`;
     dot.style.top = `${dotY - dotHeight / 2}px`;
   }
@@ -224,8 +224,8 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", updateDotPosition);
   window.addEventListener("resize", updateDotPosition);
 
-  // Position initiale
-  updateDotPosition();
+  // Premier appel différé pour assurer que le CSS est appliqué
+  setTimeout(updateDotPosition, 100);
 });
 
 //-------------------------Modal------------------------
