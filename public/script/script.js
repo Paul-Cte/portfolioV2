@@ -1,6 +1,6 @@
 // animation de mots
 
-let mots = ["developpeur", "sportif"];
+let mots = ["développeur", "sportif", "étudiant"];
 let index = 0;
 let isDeleting = false;
 let lettreIndex = 0;

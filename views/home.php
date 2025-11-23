@@ -307,8 +307,7 @@
           <p>
             J’ai acquis de nombreuses compétences au cours de mes projets,
             qu’ils soient personnels ou scolaires. Du côté des projets
-            personnels, j’ai réalisé de nombreux projets de développement web,
-            car c’est ce qui m’intéresse le plus. Pour en savoir plus,
+            personnels, j’en ai réalisé beaucoup pour faire du développement web. Pour en savoir plus,
             rendez-vous dans le slider !
             <img src="public/image/soulignement.png" alt="" />
           </p>
@@ -321,7 +320,7 @@
               <div>
                 <h1>Site Web Atos</h1>
                 <p>
-                  "imaginer une nouvelle version vulgarisé du site web d'Atos"
+                  "imaginer une nouvelle version vulgarisée du site web d'Atos"
                 </p>
               </div>
             </div>
@@ -331,7 +330,7 @@
                 <h1>Site Web Restaurant</h1>
                 <p>
                   "Création d'un démonstrateur de site web pour un restaurant
-                  Japonais"
+                  japonais"
                 </p>
               </div>
             </div>
@@ -340,8 +339,7 @@
               <div>
                 <h1>Site Web pour les aidants</h1>
                 <p>
-                  "Développement d'un site web aider les familles qui doivent
-                  s'occuper de personnes agées dépendante d'eux."
+                  "Développement d'un site web pour les aidants des personnes agêes dépendantes."
                 </p>
               </div>
             </div>
@@ -350,7 +348,7 @@
               <div>
                 <h1>Site Web Joao Neves</h1>
                 <p>
-                  "Développement d'un site web pour m'entrainer à utiliser des effets de superposition texte/image et d'effet au scroll."
+                  "Développement d'un site web pour m'entraîner à utiliser des effets de superposition texte/image et d'effet au scroll."
                 </p>
               </div>
             </div>
@@ -366,7 +364,7 @@
               <div>
                 <h1>Site Web Génération citation</h1>
                 <p>
-                  "Développement d'un site web pour m'entrainer à la manipulation d'une BD en php"</p></div>
+                  "Développement d'un site web pour m'entraîner à la manipulation d'une base de données en php et sql"</p></div>
             </div>
           </div>
           <div id="div-bspan">
@@ -415,7 +413,7 @@
             <div class="div2 div-bottom">
               <h2>STI2D</h2>
               <h3>2022-2023</h3>
-              <p>1ère année de STI2D au lycée Ferninand Buisson</p>
+              <p>1ère année de STI2D au lycée Ferninand Buisson à Voiron</p>
             </div>
             <div class="div3 div-top">
               <h2>STI2D</h2>
@@ -464,7 +462,7 @@
             <!-- <button class="btn-cv"></button> -->
             <a
               class="btn-cv"
-              href="https://drive.google.com/uc?export=download&id=1UA-pyVXj2T9q5azTuRBwEn-p4NDObO2Z"
+              href="https://drive.google.com/uc?export=download&id=19kKrF3vP9mOt9ZQsn5Bu_bzfUARE79pa"
             ></a>
           </div>
         </div>
