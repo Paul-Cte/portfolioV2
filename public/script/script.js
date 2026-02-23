@@ -78,7 +78,7 @@ function TranslateSlider() {
   spanCounterSlide.textContent = divCourante + 1 + "/" + nbrDeDiv;
   const pourcentageDecalage = -divCourante * 100;
   divDuSlider.forEach(
-    (div) => (div.style.transform = `translateX(${pourcentageDecalage}%)`)
+    (div) => (div.style.transform = `translateX(${pourcentageDecalage}%)`),
   );
 }
 
@@ -92,7 +92,7 @@ if (sliderContainer) {
       // Enregistre la position de départ
       touchStartX = e.changedTouches[0].screenX;
     },
-    { passive: true }
+    { passive: true },
   );
 
   sliderContainer.addEventListener("touchend", (e) => {
@@ -229,36 +229,47 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //-------------------------Modal------------------------
-
 let modals = document.querySelectorAll(".modal");
+let interieurModal = document.querySelectorAll(".modal > div");
 let btnEsp = document.querySelectorAll(".button-esp");
 let btnClose = document.querySelectorAll(".modal i");
 
-Array.from(btnEsp).forEach((element) => {
-  element.addEventListener("click", () => {
-    openOverlay(element);
+let currentModal = null;
+
+btnEsp.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    currentModal = modals[index];
+    currentModal.style.display = "block";
+    currentModal.style.top = window.scrollY + "px";
+    document.body.style.overflow = "hidden";
   });
 });
 
-function openOverlay(element) {
-  let indice = Array.from(btnEsp).indexOf(element);
-  modals[indice].style.display = "block";
-  modals[indice].style.top = window.scrollY + "px";
-  document.body.style.overflow = "hidden";
-}
-
-function closeOverlay(element) {
-  let indice = Array.from(btnClose).indexOf(element);
-  modals[indice].style.display = "none";
-  document.body.style.overflow = "auto";
-}
-
-Array.from(btnClose).forEach((element) => {
-  element.addEventListener("click", () => {
-    closeOverlay(element);
+btnClose.forEach((button) => {
+  button.addEventListener("click", () => {
+    closeModal();
   });
 });
 
+modals.forEach((modal) => {
+  modal.addEventListener("click", (e) => {
+    if (
+      currentModal === modal &&
+      !interieurModal[Array.from(modals).indexOf(modal)].contains(e.target) &&
+      !e.target.classList.contains("button-esp")
+    ) {
+      closeModal();
+    }
+  });
+});
+
+function closeModal() {
+  if (currentModal) {
+    currentModal.style.display = "none";
+    document.body.style.overflow = "auto";
+    currentModal = null;
+  }
+}
 // bouton decouvrir
 document.getElementById("btn-decouvrir").addEventListener("click", () => {
   window.scrollTo({

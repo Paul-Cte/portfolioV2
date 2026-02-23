@@ -23,64 +23,148 @@
     <div class="modal modal1">
       <i class="fi fi-ss-circle-xmark"></i>
       <div>
-        <h1>Projet Site Web Atos</h1>
+        <div class="modal-header">
+          <h1>Site Web pour les aidants</h1>
+          <a href="https://aled.alwaysdata.net" target="_blank" class="btn-lien-projet">Visiter le site ALED</a>
+          <a href="#" class="btn-lien-projet" target="_blank">Voir le code (à venir)</a>
+        </div>
+        
         <div class="description">
-          Nous avons travaillé sur la vulgarisation du site web d'Atos pour le
-          rendre plus accessible aux collégiens qui voudraient y faire leurs
-          stages.
+          ALED est avant tout un projet universitaire réalisé dans le cadre du semestre 3 de notre BUT informatique : grâce à ce projet, nous avons obtenu le <span>prix du 3ème meilleur prototype</span>. C'est une application web destinée à simplifier la vie des aidants familiaux qui accompagnent une personne âgée en perte d'autonomie. ALED est la solution qui centralise tout ce dont ont besoin les aidants. C'est un outil unique, collaboratif, qui permet à la famille de gérer au même endroit les aspects médicaux, administratifs et la vie quotidienne (repas, tâches ménagères).
         </div>
-        <div class="competences">
-          <h2>Compétences acquises</h2>
-          <ul>
-            <li>Travail en équipe</li>
-            <li>Utilisation d'outils collaboratifs</li>
-            <li>Adaptation au public (vulgarisation)</li>
-          </ul>
-        </div>
-        <div class="objectifs">
-          <h2>Objectifs</h2>
-          <ul>
-            <li>Rendre le site plus accessible</li>
-            <li>Améliorer l'ergonomie</li>
-            <li>Faciliter la navigation</li>
-            <li>Rendre le site plus attractif</li>
-          </ul>
-        </div>
-        <div class="travail-indiv">
-          <h2>Travail individuel</h2>
-          <ul>
-            <li>Création de wireframes</li>
-            <li>Dévoloppement Web (css,html,js)</li>
-          </ul>
-        </div>
-        <div class="tech-sf-acquis">
-          <h2>Technologies et savoir-faire acquis</h2>
-          <div>
-            <img src="public/image/html-5.png" alt="logo-html" /><img
-              src="public/image/css-3.png"
-              alt="logo-css"
-            /><img src="public/image/script-java.png" alt="logo-js" />
+        
+        <div class="modal-details-grid">
+          <div class="fonctionnalites">
+            <h2>Fonctionnalités</h2>
+            <ul>
+              <li>Système de groupe famille : Invitation de membres avec lien et système de droit.</li>
+              <li>Planning Collaboratif : Création de tâches et système d'assignation.</li>
+              <li>Gestion Documentaire Sécurisée : Stockage crypté pour les fichiers "sensibles".</li>
+              <li>Module Alimentaire & Courses : Catalogue de recettes et listes générées.</li>
+              <li>Page dédiée au profil de l'aidée.</li>
+              <li>Tableau de Bord (Widgets) : Regroupement des informations essentielles.</li>
+              <li>Accessibilité inclusive : Mode sombre, daltonien et texte ajustable.</li>
+            </ul> 
           </div>
 
-          <ul>
-            <li>Utilisation de github</li>
-            <li>Utilisation de Whimsical</li>
-          </ul>
+          <div class="stack-technique">
+            <h2>Stack technique</h2>
+            <ul>
+              <li>Frontend : HTML5, CSS3, JavaScript</li>
+              <li>Backend : PHP 8.3</li>
+              <li>Base de données : PostgreSQL</li>
+              <li>Outils : Git, Google Keep, Notion, Laragon, VS Code</li>
+              <li>Déploiement : Alwaysdata</li>
+            </ul>
+          </div>
+
+          <div class="travail-indiv">
+            <h2>Travail individuel</h2>
+            <ul>
+              <li>Chef de projet : Organisation, planning, répartition.</li>
+              <li>Création de maquettes.</li>
+              <li>Développement Web FullStack.</li>
+            </ul>
+          </div>
         </div>
-        <img src="public/image/atos.png" alt="" />
-        <img src="public/image/atos2.png" alt="" />
-        <img src="public/image/atos3.png" alt="" />
+
+        <img src="public/image/aled1.png" alt="Aperçu ALED 1" />
+        <img src="public/image/aled2.png" alt="Aperçu ALED 2" />
+        <img src="public/image/aled3.png" alt="Aperçu ALED 3" />
+        <img src="public/image/aled4.png" alt="Aperçu ALED 4" />
+        <img src="public/image/aled5.png" alt="Aperçu ALED 5" />
+        <img src="public/image/aled6.png" alt="Aperçu ALED 6" />
       </div>
     </div>
 
-    <div class="modal modal2">
+        <div class="modal modal7">
+      <i class="fi fi-ss-circle-xmark"></i>
+            <div>
+                <div class="modal-header">
+                    <h1>Acromusic</h1>
+                    <a href="#" target="_blank" class="btn-lien-projet">Visiter le site AcroMusic (à venir)</a>
+                    <a href="#" class="btn-lien-projet" target="_blank">Voir le code (à venir)</a>
+                </div>
+                
+                <p class="description">
+                    <span>PROJET EN COURS</span>.<br>
+                    Développement d'un site internet pour l'artiste Acromusic. Le projet intègre une partie frontoffice, avec la présentation des albums et des singles de l'artiste. On peut également y consulter les prochaines sorties. Il y a également un Backoffice dédié à l'administration des contenus. Ces 2 parties sont reliées par une <span>API REST</span>
+                    Ce pojet est réalisé dans le but de m'entrainer à la création d'une application web full-stack avec des outils modernes utilisés en entreprise (voir stack technique).
+                </p>
+        
+                <div class="modal-details-grid">
+
+                    <div class="stack-technique">
+                        <h2>Stack technique</h2>
+                        <ul>
+                            <li>
+                                <strong class="under-title">Frontend</strong>
+                                <ul>
+                                    <li>React (Généré avec Vite)</li>
+                                    <li>React Query (useQuery / useMutation)</li>
+                                    <li>Axios : pour communiquer avec l'API.</li>
+                                    <li>Tailwind CSS</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong class="under-title">Backend</strong>
+                                <ul>
+                                    <li>Symfony (PHP)</li>
+                                    <li>API Platform : API REST.</li>
+                                    <li>LexikJWTBundle : Sécurisation des routes d'administration par Token JWT.</li>
+                                    <li>Doctrine ORM : Gestion des entités et requêtes en base de données.</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong class="under-title">Base de données</strong>
+                                <ul>
+                                    <li>PostgreSQL</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong class="under-title">Infrastructure & DevOps</strong>
+                                <ul>
+                                    <li>Docker & Docker Compose : Conteneurisation de l'environnement (Isolation de l'application web et de la base de données).</li>
+                                    <li>WSL2 (Ubuntu) : Environnement de développement Linux sous Windows.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fonctionnalites">
+                        <h2>Fonctionnalités clés</h2>
+                        <ul>
+                            <li>Permettre l'ajout, la modification et la suppression de contenus (albums, single).</li>
+                            <li>Gérer les compositeurs dans une tableau dédié afin d'attribuer des compositeurs à chaque album ou single facilement.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Image de présentation du projet -->
+            <img src="public/image/acro1.png" alt="Aperçu Acromusic">
+            <img src="public/image/acro2.png" alt="Aperçu Acromusic">
+            <img src="public/image/acro3.png" alt="Aperçu Acromusic">
+            <img src="public/image/acro4.png" alt="Aperçu Acromusic">
+            <img src="public/image/acro5.png" alt="Aperçu Acromusic">
+            <img src="public/image/acro6.png" alt="Aperçu Acromusic">
+            <img src="public/image/acro7.png" alt="Aperçu Acromusic">
+        </div>
+    </div>
+    
+    
+
+    <div class="modal modal3">
       <i class="fi fi-ss-circle-xmark"></i>
       <div>
-        <h1>Projet Site Web Atos</h1>
+        <div class="modal-header">
+          <h1>Projet Site Web Atos</h1>
+        </div>
+        
         <div class="description">
           Je me suis amusé à imaginer un site web pour un restaurant japonais.
           C'est l'un de mes premiers projets personnels.
         </div>
+        
+        <div class="modal-details-grid">
         <div class="competences">
           <h2>Compétences acquises</h2>
           <ul>
@@ -110,6 +194,8 @@
             /><img src="public/image/script-java.png" alt="logo-js" />
           </div>
         </div>
+        </div>
+        
         <img src="public/image/resto_.png" alt="" />
         <img src="public/image/resto.png" alt="" />
         <img src="public/image/resto3.png" alt="" />
@@ -118,21 +204,18 @@
       </div>
     </div>
 
-    <div class="modal modal3">
-      <i class="fi fi-ss-circle-xmark"></i>
-      <div>
-        <h1>Site Web pour les aidants</h1>
-        <p>à venir...</p>
-      </div>
-    </div>
-
     <div class="modal modal4">
       <i class="fi fi-ss-circle-xmark"></i>
       <div>
-        <h1>Projet Fan-Page João Neves</h1>
+        <div class="modal-header">
+          <h1>Projet Fan-Page João Neves</h1>
+        </div>
+        
         <div class="description">
           Petit projet personnel réalisé pour m'entraîner à superposer du texte et des images, en m'inspirant d'une technique de design spécifique.
         </div>
+        
+        <div class="modal-details-grid">
         <div class="competences">
           <h2>Compétences acquises</h2>
           <ul>
@@ -170,6 +253,8 @@
             <li>Gestion des événements DOM (scroll, mousemove)</li>
           </ul>
         </div>
+        </div>
+        
         <!-- img projet  -->
          <img src="public/image/page1_joao.png" alt="">
       </div>
@@ -178,10 +263,15 @@
     <div class="modal modal5">
       <i class="fi fi-ss-circle-xmark"></i>
       <div>
-        <h1>Site Vitrine Pokémon</h1>
+        <div class="modal-header">
+          <h1>Site Vitrine Pokémon</h1>
+        </div>
+        
         <div class="description">
           Projet de création d'un site web vitrine pour présenter une (fausse) nouvelle collection de cartes Pokémon. L'accent est mis sur l'interactivité JavaScript, notamment la gestion d'onglets et d'une modale (overlay).
         </div>
+        
+        <div class="modal-details-grid">
         <div class="competences">
           <h2>Compétences acquises</h2>
           <ul>
@@ -221,6 +311,8 @@
             <li>Utilisation de polices personnalisées (@font-face)</li>
           </ul>
         </div>
+        </div>
+        
           <img src="public/image/page1_pokemon.png" alt="">
           <img src="public/image/page2_pokemon.png" alt="">
           <img src="public/image/page3_pokemon.png" alt="">
@@ -232,10 +324,15 @@
     <div class="modal modal6">
       <i class="fi fi-ss-circle-xmark"></i>
       <div>
-        <h1>Projet Générateur de Citations</h1>
+        <div class="modal-header">
+          <h1>Projet Générateur de Citations</h1>
+        </div>
+        
         <div class="description">
           Un générateur de citations aléatoires avec un espace administrateur. Le site utilise PHP pour se connecter à une base de données MySQL pour charger de nouvelles citations.
         </div>
+        
+        <div class="modal-details-grid">
         <div class="competences">
           <h2>Compétences acquises</h2>
           <ul>
@@ -275,26 +372,89 @@
             <li>Gestion de sessions PHP</li>
           </ul>
         </div>
+        </div>
+        
           <img src="public/image/page1_citation.png" alt="">
           <img src="public/image/page2_citation.png" alt="">
           <img src="public/image/page3_citation.png" alt="">
         </div>
     </div>
+    
+    <div class="modal modal2">
+      <i class="fi fi-ss-circle-xmark"></i>
+      <div>
+        <div class="modal-header">
+          <h1>Projet Site Web Atos</h1>
+        </div>
+        
+        <div class="description">
+          Nous avons travaillé sur la vulgarisation du site web d'Atos pour le
+          rendre plus accessible aux collégiens qui voudraient y faire leurs
+          stages.
+        </div>
+        
+        <div class="modal-details-grid">
+        <div class="competences">
+          <h2>Compétences acquises</h2>
+          <ul>
+            <li>Travail en équipe</li>
+            <li>Utilisation d'outils collaboratifs</li>
+            <li>Adaptation au public (vulgarisation)</li>
+          </ul>
+        </div>
+        <div class="objectifs">
+          <h2>Objectifs</h2>
+          <ul>
+            <li>Rendre le site plus accessible</li>
+            <li>Améliorer l'ergonomie</li>
+            <li>Faciliter la navigation</li>
+            <li>Rendre le site plus attractif</li>
+          </ul>
+        </div>
+        <div class="travail-indiv">
+          <h2>Travail individuel</h2>
+          <ul>
+            <li>Création de wireframes</li>
+            <li>Dévoloppement Web (css,html,js)</li>
+          </ul>
+        </div>
+        <div class="tech-sf-acquis">
+          <h2>Technologies et savoir-faire acquis</h2>
+          <div>
+            <img src="public/image/html-5.png" alt="logo-html" /><img
+              src="public/image/css-3.png"
+              alt="logo-css"
+            /><img src="public/image/script-java.png" alt="logo-js" />
+          </div>
+
+          <ul>
+            <li>Utilisation de github</li>
+            <li>Utilisation de Whimsical</li>
+          </ul>
+        </div>
+        </div>
+        
+        <img src="public/image/atos.png" alt="" />
+        <img src="public/image/atos2.png" alt="" />
+        <img src="public/image/atos3.png" alt="" />
+      </div>
+    </div>
+        
 
     <main>
       <nav>
         <ul>
-          <li>
+          <li title="Mes projets">
             <a href="#section-projets"
               ><img src="public/image/code.png" alt=""
             /></a>
           </li>
-          <li>
+          <li title="Mon parcours">
             <a href="#section-parcours"
               ><img src="public/image/lobtention-du-diplome.png" alt=""
             /></a>
           </li>
-          <li>
+          <li title="Contactez-moi">
             <a href="#section-contact"
               ><img id="enveloppe" src="public/image/enveloppe.png" alt=""
             /></a>
@@ -318,28 +478,26 @@
             <div id="div1">
               <button class="button-esp">En savoir plus</button>
               <div>
-                <h1>Site Web Atos</h1>
+                <h1>Site Web pour les aidants</h1>
                 <p>
-                  "imaginer une nouvelle version vulgarisée du site web d'Atos"
+                  "Développement d'un site web pour les aidants des personnes agêes dépendantes."
                 </p>
               </div>
             </div>
-            <div id="div2">
+            <div id="div7">
+              <button class="button-esp">En savoir plus</button>
+              <div>
+                <h1>Acromusic</h1>
+                <p>Réalisation d'une application web full-stack conteneurisée dédiée à l'administration et la gestion d'un portfolio pour un musicien.</p>
+              </div>
+            </div>
+            <div id="div3">
               <button class="button-esp">En savoir plus</button>
               <div>
                 <h1>Site Web Restaurant</h1>
                 <p>
                   "Création d'un démonstrateur de site web pour un restaurant
                   japonais"
-                </p>
-              </div>
-            </div>
-            <div id="div3">
-              <button class="button-esp">En savoir plus</button>
-              <div>
-                <h1>Site Web pour les aidants</h1>
-                <p>
-                  "Développement d'un site web pour les aidants des personnes agêes dépendantes."
                 </p>
               </div>
             </div>
@@ -364,9 +522,22 @@
               <div>
                 <h1>Site Web Génération citation</h1>
                 <p>
-                  "Développement d'un site web pour m'entraîner à la manipulation d'une base de données en php et sql"</p></div>
+                  "Développement d'un site web pour m'entraîner à la manipulation d'une base de données en php et sql"</p>
+                </div>
+              </div>
+
+              <div id="div2">
+                <button class="button-esp">En savoir plus</button>
+                <div>
+                  <h1>Site Web Atos</h1>
+                  <p>
+                    "imaginer une nouvelle version vulgarisée du site web d'Atos"
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
+            
+            
           <div id="div-bspan">
             <button id="before">←</button>
             <button id="after">→</button>

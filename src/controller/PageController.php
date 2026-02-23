@@ -9,7 +9,7 @@ use portfolioV2\model\MailService;
 
 class PageController {
 
-    // Affiche la page d'accueil (notre portfolio)
+    // Affiche la page d'accueil 
     public function home() {
         $statusMessage = $_SESSION['status_message'] ?? null;
         unset($_SESSION['status_message']);
