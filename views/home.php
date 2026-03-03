@@ -4,9 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paul Comte - Portfolio Développeur Web</title>
-    <meta name="description" content="Venez découvrir mon portfolio,je suis en apprentissage pour être développeur web. découvrez mes projets en HTML, CSS, JavaScript et PHP, mon parcours et un formulaire de contact.">
-    <link rel="stylesheet" href="public/style/style.css" />
-      <link rel="icon" type="image/x-icon" href="public/image/faviconpcsf.ico">
+    <meta name="description" content="Je m'appelle Paul Comte, je suis actuellement en BUT Informatique pour devenir un développeur web. Vous pourrez trouver ici le détail de mes projets personnels et professionnels, mon parcours et un formulaire de contact.">
+    <link rel="stylesheet" href="public/style/style.css">
+    <link rel="icon" type="image/x-icon" href="public/image/faviconpcsf.ico">
+    <link rel="preconnect" href="https://cdn-uicons.flaticon.com">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css">
   </head>
 
   <body>
@@ -446,17 +450,17 @@
         <ul>
           <li title="Mes projets">
             <a href="#section-projets"
-              ><img src="public/image/code.png" alt=""
+              ><img src="public/image/code.png" alt="Icone code"
             /></a>
           </li>
           <li title="Mon parcours">
             <a href="#section-parcours"
-              ><img src="public/image/lobtention-du-diplome.png" alt=""
+              ><img src="public/image/lobtention-du-diplome.png" alt="Icone diplôme"
             /></a>
           </li>
           <li title="Contactez-moi">
             <a href="#section-contact"
-              ><img id="enveloppe" src="public/image/enveloppe.png" alt=""
+              ><img id="enveloppe" src="public/image/enveloppe.png" alt="Icone enveloppe"
             /></a>
           </li>
         </ul>
@@ -469,7 +473,7 @@
             qu’ils soient personnels ou scolaires. Du côté des projets
             personnels, j’en ai réalisé beaucoup pour faire du développement web. Pour en savoir plus,
             rendez-vous dans le slider !
-            <img src="public/image/soulignement.png" alt="" />
+            <img src="public/image/soulignement.png" alt="Image soulignement" />
           </p>
         </div>
 
@@ -614,17 +618,17 @@
           <div class="div-ul-btn">
             <ul>
               <li>
-                <a href="https://github.com/Paul-Cte"
+                <a aria-label="Github" href="https://github.com/Paul-Cte"
                   ><i class="fi fi-brands-github"></i
                 ></a>
               </li>
               <li>
-                <a href="mailto:paul.comte3878@gmail.com"
+                <a aria-label="Email" href="mailto:paul.comte3878@gmail.com"
                   ><i class="fi fi-sr-circle-envelope"></i
                 ></a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/paul-comte-5794b1333/"
+                <a aria-label="LinkedIn" href="https://www.linkedin.com/in/paul-comte-5794b1333/"
                   ><i class="fi fi-brands-linkedin"></i
                 ></a>
               </li>
@@ -633,6 +637,7 @@
             <!-- <button class="btn-cv"></button> -->
             <a
               class="btn-cv"
+              aria-label="Télécharger mon CV"
               href="https://drive.google.com/uc?export=download&id=19kKrF3vP9mOt9ZQsn5Bu_bzfUARE79pa"
             ></a>
           </div>
@@ -685,7 +690,7 @@
                 required
               ></textarea>
             </label>
-            <button id="btn-envoyer" type="submit"></button>
+            <button id="btn-envoyer" type="submit" aria-label="envoyer"></button>
           </form>
         </div>
       </section>
@@ -696,17 +701,17 @@
           <h3>Mes réseaux</h3>
           <ul>
             <li>
-              <a href="https://github.com/Paul-Cte"
+              <a aria-label="Github" href="https://github.com/Paul-Cte"
                 ><i class="fi fi-brands-github"></i
               ></a>
             </li>
             <li>
-              <a href="mailto:paul.comte3878@gmail.com"
+              <a aria-label="Email" href="mailto:paul.comte3878@gmail.com"
                 ><i class="fi fi-sr-circle-envelope"></i
               ></a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/paul-comte-5794b1333/"
+              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/paul-comte-5794b1333/"
                 ><i class="fi fi-brands-linkedin"></i
               ></a>
             </li>
@@ -714,11 +719,11 @@
         </div>
         <div class="footer-div-link">
           <ul>
-            <li><a href="views/mentions-legales.php">Mentions légales</a></li>
+            <li><a aria-label="Mentions légales" href="views/mentions-legales.php">Mentions légales</a></li>
           </ul>
         </div>
       </section>
-      <p>&copy; 2025 Paul Comte. Tous droits réservés.</p>
+      <p>&copy; 2026 Paul Comte. Tous droits réservés.</p>
     </footer>
     <script src="public/script/script.js"></script>
   </body>
