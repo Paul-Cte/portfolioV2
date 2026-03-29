@@ -29,8 +29,8 @@
       <div>
         <div class="modal-header">
           <h1>Site Web pour les aidants</h1>
-          <a href="https://aled.alwaysdata.net" target="_blank" class="btn-lien-projet">Visiter le site ALED</a>
-          <a href="#" class="btn-lien-projet" target="_blank">Voir le code (à venir)</a>
+          <a href="https://aled.alwaysdata.net" target="_blank" rel="noopener noreferrer" class="btn-lien-projet">Visiter le site ALED</a>
+          <a href="https://github.com/Paul-Cte/ALED" target="_blank" rel="noopener noreferrer" class="btn-lien-projet">Voir le code</a>
         </div>
         
         <div class="description">
@@ -86,8 +86,8 @@
             <div>
                 <div class="modal-header">
                     <h1>Acromusic</h1>
-                    <a href="#" target="_blank" class="btn-lien-projet">Visiter le site AcroMusic (à venir)</a>
-                    <a href="#" class="btn-lien-projet" target="_blank">Voir le code (à venir)</a>
+                    <a href="https://acromusic.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-lien-projet">Visiter le site AcroMusic</a>
+                    <a href="https://github.com/Paul-Cte/AcroMusic" target="_blank" rel="noopener noreferrer" class="btn-lien-projet">Voir le code</a>
                 </div>
                 
                 <p class="description">
@@ -151,6 +151,7 @@
             <img src="public/image/acro5.png" alt="Aperçu Acromusic">
             <img src="public/image/acro6.png" alt="Aperçu Acromusic">
             <img src="public/image/acro7.png" alt="Aperçu Acromusic">
+            <img src="public/image/acro8.png" alt="Aperçu Acromusic">
         </div>
     </div>
     
@@ -618,17 +619,17 @@
           <div class="div-ul-btn">
             <ul>
               <li>
-                <a aria-label="Github" href="https://github.com/Paul-Cte"
+                <a aria-label="Github" href="https://github.com/Paul-Cte" rel="noopener noreferrer" target="_blank"
                   ><i class="fi fi-brands-github"></i
                 ></a>
               </li>
               <li>
-                <a aria-label="Email" href="mailto:paul.comte3878@gmail.com"
+                <a aria-label="Email" href="mailto:paul.comte3878@gmail.com" rel="noopener noreferrer" target="_blank"
                   ><i class="fi fi-sr-circle-envelope"></i
                 ></a>
               </li>
               <li>
-                <a aria-label="LinkedIn" href="https://www.linkedin.com/in/paul-comte-5794b1333/"
+                <a aria-label="LinkedIn" href="https://www.linkedin.com/in/paul-comte-5794b1333/" rel="noopener noreferrer" target="_blank"
                   ><i class="fi fi-brands-linkedin"></i
                 ></a>
               </li>
@@ -639,6 +640,8 @@
               class="btn-cv"
               aria-label="Télécharger mon CV"
               href="https://drive.google.com/uc?export=download&id=19kKrF3vP9mOt9ZQsn5Bu_bzfUARE79pa"
+              rel="noopener noreferrer"
+              target="_blank"
             ></a>
           </div>
         </div>
@@ -701,17 +704,17 @@
           <h3>Mes réseaux</h3>
           <ul>
             <li>
-              <a aria-label="Github" href="https://github.com/Paul-Cte"
+              <a aria-label="Github" href="https://github.com/Paul-Cte" target="_blank" rel="noopener noreferrer"
                 ><i class="fi fi-brands-github"></i
               ></a>
             </li>
             <li>
-              <a aria-label="Email" href="mailto:paul.comte3878@gmail.com"
+              <a aria-label="Email" href="mailto:paul.comte3878@gmail.com" target="_blank" rel="noopener noreferrer"
                 ><i class="fi fi-sr-circle-envelope"></i
               ></a>
             </li>
             <li>
-              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/paul-comte-5794b1333/"
+              <a aria-label="LinkedIn" href="https://www.linkedin.com/in/paul-comte-5794b1333/" target="_blank" rel="noopener noreferrer"
                 ><i class="fi fi-brands-linkedin"></i
               ></a>
             </li>
